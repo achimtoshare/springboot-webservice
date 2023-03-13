@@ -3,11 +3,11 @@ name: Deploy to Production
 on:
   push:
     branches:
-      - main
+      - master
  
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout source code
         uses: actions/checkout@master
