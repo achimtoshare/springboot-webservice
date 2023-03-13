@@ -31,7 +31,7 @@ jobs:
         shell: bash
 
       - name: Configure AWS credentials # AWS 자격 증명
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@master
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
