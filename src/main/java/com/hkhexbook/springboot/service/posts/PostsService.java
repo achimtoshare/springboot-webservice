@@ -40,7 +40,7 @@ public class PostsService {
     @Transactional(readOnly = true) //트랜잭션범위는 유지하되 조회기능만 남겨두어 조회속도 개선. 등록,수정, 삭제 기능이 전혀 없는 서비스 메소드에서 사용하는 것 추천.
     public List<PostsListResponseDto> findAllDesc() {
         return postsRepository.findAllDesc().stream()
-                .map(PostsListResponseDto::new) //람다식. 다시 공부하고 정리필요.ㅇㅇㅇ
+                .map(PostsListResponseDto::new) //람다식
                 .collect(Collectors.toList());
     }
 
