@@ -10,7 +10,7 @@ spring:
   session:
     store-type: jdbc
 
-# Test OAuth
+  # Test OAuth
   security:
     oauth2:
       client:

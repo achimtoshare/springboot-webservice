@@ -26,26 +26,26 @@ public class HelloControllerTest {
     @Autowired
     private MockMvc mvc;
 
- //   @Test
+    //   @Test
 //    public void helloretun() throws Exception {
 //        String hello = "hello";
 
- //       mvc.perform(get("/hello")) //mvc.perform(get("/hello") MocMvc를통해 주소로 HTTP GET요청을 한다.
- //               .andExpect(status().isOk())
- //               .andExpect(content().string(hello));
+    //       mvc.perform(get("/hello")) //mvc.perform(get("/hello") MocMvc를통해 주소로 HTTP GET요청을 한다.
+    //               .andExpect(status().isOk())
+    //               .andExpect(content().string(hello));
 
- //   }
+    //   }
 
     @WithMockUser(roles = "USER")
     @Test
-    public void helloDto_return() throws Exception{
+    public void helloDto_return() throws Exception {
         String name = "hello";
         int amount = 2000;
 
-        mvc.perform(get("/hello/dto").param("name",name).param("amount",String.valueOf(amount)))
+        mvc.perform(get("/hello/dto").param("name", name).param("amount", String.valueOf(amount)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is(name)))
-                .andExpect(jsonPath("$.amount",is(amount)));
+                .andExpect(jsonPath("$.amount", is(amount)));
     }
 
 }
