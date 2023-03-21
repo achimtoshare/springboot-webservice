@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mariadb://hkhspringservice.cisjkj2hiv9m.ap-northeast-2.rds.amazonaws.com:3306/hkhspringservice
+    username: admin
+    password: zmtm50rls
+    driver-class-name: org.mariadb.jdbc.Driver
